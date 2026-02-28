@@ -2,18 +2,26 @@
 <html>
 <head>
   <title>EVA – TNEA Assistant</title>
+
+  <!-- Road Rage Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
-<div class="chat-box">
+<div class="header">
+  <h1 class="logo">EVA</h1>
+  <p class="tagline">TNEA Assistant</p>
+</div>
+
+<div class="chat-wrapper">
   <div id="chat"></div>
 
-  <input
-    id="input"
-    placeholder="Ask EVA..."
-    autofocus
-  />
+  <div class="input-area">
+    <input id="input" placeholder="Type your question..." autofocus />
+    <button onclick="sendMessage()">SEND</button>
+  </div>
 </div>
 
 <script src="/static/app.js"></script>
