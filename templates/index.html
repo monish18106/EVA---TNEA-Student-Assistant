@@ -2,27 +2,62 @@
 <html>
 <head>
   <title>EVA – TNEA Assistant</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Road Rage Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
+<canvas id="particle-canvas"></canvas>
+
 <div class="header">
-  <h1 class="logo">EVA</h1>
-  <p class="tagline">TNEA Assistant</p>
+  <div class="header-content">
+    <h1 class="logo">EVA</h1>
+    <p class="tagline">TNEA Assistant</p>
+    <p class="subtitle">Powered by AI & Official Data</p>
+  </div>
+  <button id="clear-btn" class="header-btn" title="Clear chat history">
+    <i class="fas fa-trash-alt"></i> Clear
+  </button>
 </div>
 
 <div class="chat-wrapper">
-  <div id="chat"></div>
+  <div id="chat" class="chat-container"></div>
+
+  <div class="suggestions" id="suggestions">
+    <p class="suggestions-label">Quick questions:</p>
+    <div class="suggestion-btns">
+      <button class="suggestion-btn" onclick="sendSuggestion('What are the cutoff marks for CSE in Chennai?')">
+        <i class="fas fa-graduation-cap"></i> Cutoff marks
+      </button>
+      <button class="suggestion-btn" onclick="sendSuggestion('Which colleges offer ECE in Coimbatore?')">
+        <i class="fas fa-building"></i> Colleges
+      </button>
+      <button class="suggestion-btn" onclick="sendSuggestion('What is Mechanical Engineering?')">
+        <i class="fas fa-question-circle"></i> Course info
+      </button>
+    </div>
+  </div>
 
   <div class="input-area">
-    <input id="input" placeholder="Type your question..." autofocus />
-    <button onclick="sendMessage()">SEND</button>
+    <div class="input-wrapper">
+      <input id="input" placeholder="Ask about TNEA cutoffs, colleges..." autofocus maxlength="500" />
+      <span id="char-count" class="char-count">0/500</span>
+    </div>
+    <button id="send-btn" onclick="sendMessage()" class="send-button" title="Send message (Enter)">
+      <i class="fas fa-paper-plane"></i> SEND
+    </button>
   </div>
 </div>
+
+<div id="toast-notification" class="toast"></div>
 
 <script src="/static/app.js"></script>
 </body>
