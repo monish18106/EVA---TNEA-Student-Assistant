@@ -13,7 +13,7 @@ An intelligent AI-powered assistant for Tamil Nadu Engineering Admissions (TNEA)
 
 - 🎯 **Smart Query Routing** – Understands 6 different query types
 - 🗂️ **College Listings** – Find colleges by district
-- 📊 **Cutoff Information** – Get cutoff marks by course, category, district
+- 📊 **Cutoff Information** – Get cutoff marks by course , category, district
 - 🔍 **Eligibility Checker** – "I scored 185, can I get CSE in Madurai?"
 - 💬 **Conversational AI** – Multi-turn conversations with context awareness
 - 🛡️ **Zero Hallucinations** – Strict RAG architecture, only uses official data
