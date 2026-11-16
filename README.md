@@ -50,7 +50,9 @@ An intelligent AI-powered assistant for Tamil Nadu Engineering Admissions (TNEA)
 │   Vector Database                   │
 │   • college_catalog_db              │
 │   • cutoff_db                       │
-│   • query_history_db                │
+│   • query_history_db                |
+|   embeddings model                  |
+|   all-MiniLM-L6-v2                  │
 └─────────────────────────────────────┘
 ```
 
